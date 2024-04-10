@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='container'>
+
+      <Title/>
+      <Search/>
+    <h3>
+      Search for any IP address or domain
+      IP Address
+      Location
+      Timezone
+      UTC 
+      ISP
+    </h3>
     </div>
+    </>
   );
 }
+function Title() {
+  return (
+    <>
+    <h1 className='title'>IP Address Tracker</h1>
+    </>
+  );
+}
+function Search() {
+  return (
+    <>
+    <div className='searchbar-box'>
+    <input type="text" placeholder="Search for any IP address or domain"  className='searchbar-input'/>
+    <div className='search'>{">"}</div>
+    </div>
+    </>
+  );
+}
+
 
 export default App;
