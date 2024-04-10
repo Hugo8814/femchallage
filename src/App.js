@@ -32,7 +32,9 @@ function Search() {
     <>
     <div className='searchbar-box'>
     <input type="text" placeholder="Search for any IP address or domain"  className='searchbar-input'/>
-    <div className='search'>{">"}</div>
+    <div className='search'>
+    <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
+    </div>
     </div>
     </>
   );
