@@ -36,7 +36,7 @@ function Search() {
       <div className='searchbar-box'>
         <input type="text" placeholder="Search for any IP address or domain"  className='searchbar-input'/>
         <div className='search'>
-          <FontAwesomeIcon icon={faChevronRight} /> {/* Us t specific icon */}
+          <FontAwesomeIcon icon={faChevronRight} /> {/* Us  specific icon */}
         </div>
       </div>
     </>
