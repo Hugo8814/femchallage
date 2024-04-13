@@ -41,8 +41,12 @@ html{
     
 }
 .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: green;
     width: 5rem;
     height: 100%;
     font-size: 3rem;
+    
 }
