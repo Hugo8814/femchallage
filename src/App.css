@@ -13,9 +13,9 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: top;
-  padding-top: 2rem;
+  padding-top: 4rem;
   min-height: 34vh;
-  gap: 2rem;
+  gap: 3rem;
   background-image: url("/src/img/pattern-bg-desktop.png");
   background-size: cover;
   background-position: center;
@@ -23,31 +23,31 @@ html {
 
 .title {
   color: rgb(255, 255, 255);
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .searchbar-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40rem;
-  height: 4.5rem;
+  width: 60rem;
+  height: 6rem;
   position: relative;
 
   background-color: white;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .searchbar-input {
   height: 100%;
   width: 100%;
   border: none;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 15px 0px 0px 15px;
   padding-left: 3rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 .searchbar-input::placeholder {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .searchbar-input:focus {
@@ -61,7 +61,7 @@ html {
   width: 5rem;
   height: 100%;
   font-size: 3rem;
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .search-icon {
@@ -70,11 +70,11 @@ html {
 }
 
 .display {
-  height: 12rem;
+  height: 20rem;
   background-color: white;
   width: 70%;
   position: absolute;
-  top: 16rem;
+  top: 23rem;
   border-radius: 1.7rem;
   display: flex;
   align-items: center;
@@ -82,7 +82,8 @@ html {
   z-index: 401;
 }
 .display-title {
-  font-size: 2rem;
+  font-weight: 600;
+  font-size: 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -98,11 +99,11 @@ html {
 
 .display-title span {
   color: rgb(140, 139, 139);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .map {
-  height: 66vh;
+  height: 65vh;
   width: 100%;
   background-color: rgb(22, 80, 22);
 }
