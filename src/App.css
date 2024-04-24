@@ -1,52 +1,107 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 4rem;
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  padding-top: 2rem;
+  min-height: 34vh;
+  gap: 2rem;
+  background-image: url("/src/img/pattern-bg-desktop.png");
+  background-size: cover;
+  background-position: center;
+}
 
-.title{
-    color: black;
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
 }
-.searchbar-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40rem;
-    height: 5rem;
-    
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-   
+.searchbar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 4.5rem;
+  position: relative;
+
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.searchbar-input{
-    height: 100%;
-    width: 100%;
-    border: none;
-    
+.searchbar-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 8px 0px 0px 8px;
+  padding-left: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: green;
-    width: 5rem;
-    height: 100%;
-    font-size: 3rem;
-    
+.searchbar-input::placeholder {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.searchbar-input:focus {
+  outline: none;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  width: 5rem;
+  height: 100%;
+  font-size: 3rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.search-icon {
+  color: white;
+  height: 1.5rem;
+}
+
+.display {
+  height: 12rem;
+  background-color: white;
+  width: 70%;
+  position: absolute;
+  top: 16rem;
+  border-radius: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.display-title {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  height: 60%;
+  padding: 0 5rem;
+  border-right: solid 1px rgb(202, 202, 202);
+}
+.noborder {
+  border-right: none;
+}
+
+.display-title span {
+  color: rgb(140, 139, 139);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.map {
+  height: 66vh;
+  width: 100%;
+  background-color: rgb(22, 80, 22);
 }
