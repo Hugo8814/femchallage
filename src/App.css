@@ -79,6 +79,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: start;
+  z-index: 401;
 }
 .display-title {
   font-size: 2rem;

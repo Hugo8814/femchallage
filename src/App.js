@@ -1,6 +1,9 @@
 import "./App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useRef } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
         <Search />
         <Display />
       </div>
-      <Map />
+      <MapDisplay />
     </>
   );
 }
@@ -62,8 +65,41 @@ function Display() {
     </div>
   );
 }
+function MapDisplay() {
+  return <Map />;
+}
+
 function Map() {
-  return <div className="map"></div>;
+  const mapRef = useRef(null);
+  useEffect(() => {
+    if (!mapRef.current) {
+      const map = L.map("map").setView([51.505, -0.09], 13);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([51.5, -0.09])
+        .addTo(map)
+        .bindPopup("A pretty CSS popup.<br> Easily customizable.")
+        .openPopup();
+
+      mapRef.current = map;
+    }
+
+    return () => {
+      // Remove the map instance when the component unmounts
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+    };
+  }, []);
+
+  return (
+    <div className="map" id="map" style={{ width: "100%", height: "400px" }} />
+  );
 }
 
 export default App;
